@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKEditor </title>
+
+    <script src="/ckeditor/build/ckeditor.js"></script>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <style>
+        .ck-editor__editable { height: 400px; }
+        .ck-content { font-size: 12px; }
+      </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+
+            111111
+
+            <div class="contents">
+                <div class="box">222</div>
+                <div class="box">3333</div>
+                <div class="box">4444</div>
+            </div>
+        </div>
+        <div class="footer">
+            5555
+        </div>
+    </div>
+
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Hidden brand</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+</div>      
+
+
+
+    <h1>CKEditor 5</h1>
+
+    <form action="" method="POST">
+        <textarea name="text" id="editor" placeholder="내용을 입력해 주세요"></textarea>
+    </form>
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+<script>
+    ClassicEditor
+    .create( document.querySelector('#editor'), {
+        removePlugins: [ 'Heading' ],
+        language: "ko"
+    }).catch(error => {
+        console.log(error);
+    });
+  </script>
+
+</body>
+</html>
